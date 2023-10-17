@@ -17,11 +17,18 @@ public class Variety3 : MonoBehaviour
             print("got me");
             Destroy(other.gameObject);
             transform.localScale += new Vector3 (.5f,.5f,0);
-        }    
+        }   
+
+        if (other.gameObject.tag == "Antidote")
+        {
+            print("Thank you");
+            Destroy(other.gameObject);
+            transform.localScale += new Vector3(-.5f,-.5f,0);
+        }
     }
 
     // Update is called once per frame
-    void fixedUpdate()
+    void FixedUpdate()
     {
         transform.localScale += new Vector3 (Random.Range(-.02f,.02f), Random.Range(-.02f,.02f), Random.Range(0,0));
         transform.position = transform.position + new Vector3(Random.Range(-.01f,.01f), Random.Range(-.01f,.01f), Random.Range(0,0));

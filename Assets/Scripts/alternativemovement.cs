@@ -11,7 +11,7 @@ public class alternativemovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(.02f,0,0 * .1f);
         transform.Rotate(0, 0, .2f, Space.Self);

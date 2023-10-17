@@ -11,8 +11,9 @@ public class Variety : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        transform.localScale += new Vector3(Random.Range(-.02f, .02f), Random.Range(-.02f, .02f), Random.Range(0, 0));
         transform.position = transform.position + new Vector3(Random.Range(-.05f,.05f), Random.Range(-.05f,.05f), Random.Range(0,0));
     }
 }
