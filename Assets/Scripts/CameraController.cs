@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Kamera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public GameObject player;
 
@@ -15,6 +15,6 @@ public class Kamera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 5, player.transform.position.z -10);
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 5, player.transform.position.z - 10);
     }
 }
